@@ -68,6 +68,7 @@ pub const TABLE: &'static [(Code, Char)] = &[
     ("sr", "ʂ"),
     ("sc", "ʃ"),
     ("sj", "ɕ"),
+    ("x", "χ"),
     /* IP Phonation */
     ("^h", "ʰ"),
     ("^hv", "ʱ"),
