@@ -2,8 +2,10 @@ type Code = &'static str;
 type Char = &'static str;
 
 pub const TABLE: &'static [(Code, Char)] = &[
+    /* Signs and Punctuation */
     ("<", "⟨"),
     (">", "⟩"),
+    /* Generic Notational */
     ("_0", "₀"),
     ("_1", "₁"),
     ("_2", "₂"),
@@ -28,12 +30,15 @@ pub const TABLE: &'static [(Code, Char)] = &[
     ("_e", "ₑ"),
     ("_o", "ₒ"),
     ("_h", "ₕ"),
+    /* Miscellaneous */
     ("0", "∅"),
+    /* IPA Tone */
     ("1", "˩"),
-    ("2", "˨"),
+    ("2", "˧"),
     ("3", "˧"),
     ("4", "˦"),
     ("5", "˥"),
+    /* IPA Vowel Letters */
     ("a", "ɐ"),
     ("ae", "æ"),
     ("OE", "ɶ"),
@@ -56,4 +61,11 @@ pub const TABLE: &'static [(Code, Char)] = &[
     ("i", "ɨ"),
     ("u", "ʉ"),
     ("ua", "ɯ"),
+    /* IPA Consonant Letters */
+    ("sr", "ʂ"),
+    ("sj", "ɕ"),
+    /* IP Phonation */
+    ("^h", "ʰ"),
+    ("^hv", "ʱ"),
+    ("^=", "˭"),
 ];

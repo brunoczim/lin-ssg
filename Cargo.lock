@@ -353,6 +353,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "lin-ssg-linguistics"
+version = "0.1.0"
+dependencies = [
+ "lin-ssg-core",
+ "lin-ssg-linguinput",
+ "serde_json",
+ "thiserror 2.0.3",
+]
+
+[[package]]
 name = "log"
 version = "0.4.22"
 source = "registry+https://github.com/rust-lang/crates.io-index"

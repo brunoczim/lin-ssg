@@ -1,5 +1,5 @@
 [workspace]
-members = ["core", "linguinput"]
+members = ["core", "linguinput", "packs/linguistics"]
 resolver = "2"
 
 [workspace.dependencies]

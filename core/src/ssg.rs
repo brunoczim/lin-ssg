@@ -8,6 +8,7 @@ use std::{
     path::{Path, PathBuf, StripPrefixError},
 };
 
+use serde::Serialize;
 use tera::{Context, Tera};
 use thiserror::Error;
 
@@ -85,11 +86,16 @@ impl LinSsg {
         })
     }
 
-    pub fn register_const(
-        &mut self,
-        name: impl Into<String>,
-        value: &serde_json::Value,
-    ) {
+    pub fn register_symbol(&mut self, name: impl Into<String>) {
+        let name = name.into();
+        let value = serde_json::Value::from(&name[..]);
+        self.register_const(name, value);
+    }
+
+    pub fn register_const<T>(&mut self, name: impl Into<String>, value: T)
+    where
+        T: Serialize,
+    {
         self.base_context.insert(name.into(), &value);
     }
 

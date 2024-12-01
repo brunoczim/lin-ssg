@@ -1,0 +1,10 @@
+[package]
+name = "lin-ssg-linguistics"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+lin-ssg-core = { path = "../../core" }
+lin-ssg-linguinput = { path = "../../linguinput" }
+thiserror = { workspace = true }
+serde_json = { workspace = true }
