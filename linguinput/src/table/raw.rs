@@ -34,7 +34,7 @@ pub const TABLE: &'static [(Code, Char)] = &[
     ("0", "∅"),
     /* IPA Tone */
     ("1", "˩"),
-    ("2", "˧"),
+    ("2", "˨"),
     ("3", "˧"),
     ("4", "˦"),
     ("5", "˥"),
@@ -62,7 +62,11 @@ pub const TABLE: &'static [(Code, Char)] = &[
     ("u", "ʉ"),
     ("ua", "ɯ"),
     /* IPA Consonant Letters */
+    ("lo", "ɫ"),
+    ("r", "ɹ"),
+    ("rd", "ɾ"),
     ("sr", "ʂ"),
+    ("sc", "ʃ"),
     ("sj", "ɕ"),
     /* IP Phonation */
     ("^h", "ʰ"),
