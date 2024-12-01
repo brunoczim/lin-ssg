@@ -60,7 +60,7 @@ impl<'a> Args<'a> for TranscArgs<'a> {
                 TranscriptionType::GraphemicRaw
             })?;
         let lang = args.retrive_arg_with_default("lg", || None)?;
-        let attested = args.retrive_arg_with_default("att", || false)?;
+        let attested = args.retrive_arg_with_default("att", || true)?;
         Ok(Self { input, lang, ty, attested })
     }
 }
