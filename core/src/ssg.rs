@@ -288,7 +288,7 @@ impl LinSsg {
     }
 
     fn write_pages(&mut self) -> Result<(), BuildError> {
-        for (page, context) in &self.pages {
+        for (page, context_extra) in &self.pages {
             let mut output_page = PathBuf::from(self.config.output_dir());
             let suffix = Path::new(page)
                 .strip_prefix(self.config.page_dir())
@@ -300,6 +300,8 @@ impl LinSsg {
                 .map_err(BuildError::on(&directory))?;
             let mut output_file = File::create_new(&output_page)
                 .map_err(BuildError::on(&output_page))?;
+            let mut context = self.base_context.clone();
+            context.extend(context_extra.clone());
             self.tera
                 .render_to(page, &context, &mut output_file)
                 .map_err(BuildError::on(&output_page))?;
