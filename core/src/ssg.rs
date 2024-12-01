@@ -74,8 +74,10 @@ impl LinSsg {
     const ASSET_BUF_SIZE: usize = 8192;
 
     pub(crate) fn new(config: Config) -> Result<Self, InitError> {
-        let template_dir =
-            config.template_dir().to_str().ok_or(InitError::TemplateDirUtf8)?;
+        let template_dir = config
+            .template_dir_with_globs()
+            .to_str()
+            .ok_or(InitError::TemplateDirUtf8)?;
         let tera = Tera::new(template_dir)?;
         Ok(Self {
             config,

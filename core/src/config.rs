@@ -47,6 +47,10 @@ impl Config {
         Path::new(&self.template_dir[.. "/**/*".len()])
     }
 
+    pub(crate) fn template_dir_with_globs(&self) -> &Path {
+        Path::new(&self.template_dir)
+    }
+
     pub fn page_dir(&self) -> &Path {
         &self.page_dir
     }
