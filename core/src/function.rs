@@ -30,11 +30,11 @@ pub enum InvokeError<E> {
 
 #[derive(Debug, Error)]
 pub enum ArgError {
-    #[error("argument {} is required but it is missing", .0)]
+    #[error("Argument {} is required but it is missing", .0)]
     MissingArgument(String),
-    #[error("argument {} type should be {} but it is mismatched", .arg, .ty)]
+    #[error("Argument {} type should be {} but it is mismatched", .arg, .ty)]
     MismatchedTypes { arg: String, ty: String },
-    #[error("argument {} is unknown", .0)]
+    #[error("Argument {} is unknown", .0)]
     UnknownArguments(String),
 }
 

@@ -20,7 +20,7 @@ pub enum ParseError {
 
 #[derive(Debug, Error)]
 pub enum SplitError {
-    #[error("missing metadata terminator line {}", METADATA_TERMINATOR)]
+    #[error("Missing metadata terminator line {}", METADATA_TERMINATOR)]
     MissingMetadataTerminator,
 }
 

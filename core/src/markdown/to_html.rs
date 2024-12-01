@@ -13,7 +13,7 @@ pub const TEMPLATE_BLOCK_END: &str = "}}";
 
 #[derive(Debug, Error)]
 pub enum ToHtmlError {
-    #[error("formatting error")]
+    #[error("Formatting error")]
     Fmt(
         #[from]
         #[source]
@@ -21,7 +21,7 @@ pub enum ToHtmlError {
     ),
     #[error(transparent)]
     Slugify(#[from] SlugifyError),
-    #[error("converting markdown node {} to HTML is not supported", .0)]
+    #[error("Converting markdown node {} to HTML is not supported", .0)]
     Unsupported(String),
     #[error("HTML/Markdown template block not closed, near {}", .0)]
     UnclosedBlock(String),

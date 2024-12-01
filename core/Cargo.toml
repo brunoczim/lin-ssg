@@ -1,0 +1,12 @@
+[package]
+name = "lin-ssg-core"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tera = { workspace = true }
+markdown = { workspace = true }
+toml = { workspace = true }
+thiserror = { workspace = true }
+serde = { workspace = true, features = ["derive"] }
+serde_json = { workspace = true }

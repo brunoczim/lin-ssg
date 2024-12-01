@@ -1,0 +1,8 @@
+[package]
+name = "lin-ssg-linguinput"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+thiserror = { workspace = true }
+unicode-segmentation = "1.12.0"

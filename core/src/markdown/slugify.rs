@@ -5,13 +5,13 @@ use thiserror::Error;
 
 #[derive(Debug, Error)]
 pub enum SlugifyError {
-    #[error("formatting error")]
+    #[error("Formatting error")]
     Fmt(
         #[from]
         #[source]
         fmt::Error,
     ),
-    #[error("slugifying markdown node {} is not supported", .0)]
+    #[error("Slugifying markdown node {} is not supported", .0)]
     Unsupported(String),
 }
 

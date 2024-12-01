@@ -333,7 +333,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8355be11b20d696c8f18f6cc018c4e372165b1fa8126cef092399c9951984ffa"
 
 [[package]]
-name = "lin-ssg"
+name = "lin-ssg-core"
 version = "0.1.0"
 dependencies = [
  "markdown",
@@ -342,6 +342,14 @@ dependencies = [
  "tera",
  "thiserror 2.0.3",
  "toml",
+]
+
+[[package]]
+name = "lin-ssg-linguinput"
+version = "0.1.0"
+dependencies = [
+ "thiserror 2.0.3",
+ "unicode-segmentation",
 ]
 
 [[package]]
@@ -833,6 +841,12 @@ name = "unicode-ident"
 version = "1.0.14"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "adb9e6ca4f869e1180728b7950e35922a7fc6397f7b641499e8f3ef06e50dc83"
+
+[[package]]
+name = "unicode-segmentation"
+version = "1.12.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f6ccf251212114b54433ec949fd6a7841275f9ada20dddd2f29e9ceea4501493"
 
 [[package]]
 name = "version_check"

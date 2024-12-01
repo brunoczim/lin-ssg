@@ -52,7 +52,7 @@ enum BuildErrorKind {
     Tera(#[from] tera::Error),
     #[error(transparent)]
     Io(#[from] io::Error),
-    #[error("path not compatible with UTF-8")]
+    #[error("Path not compatible with UTF-8")]
     NonUtf8Path,
     #[error(transparent)]
     BadStripPrefix(#[from] StripPrefixError),
