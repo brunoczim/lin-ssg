@@ -69,6 +69,12 @@ pub const TABLE: &'static [(Code, Char)] = &[
     ("sc", "ʃ"),
     ("sj", "ɕ"),
     ("x", "χ"),
+    /* IPA length */
+    (":", "ː"),
+    (".", "ˑ"),
+    /* IPA Prosody */
+    ("'", "ˈ"),
+    (",", "ˌ"),
     /* IP Phonation */
     ("^h", "ʰ"),
     ("^hv", "ʱ"),
